@@ -1,7 +1,9 @@
 #!/usr/bin/python
 # download images from text file containing urls to current working directory
 # url must containing an image file name behind the last /
-# e.g. http://www.website.com/header.jpg
+# e.g.
+# http://www.website.com/header.jpg
+# http://www.website.com/image2.gif
 # written by
 # stephan.rossbauer@gmail.com
 
