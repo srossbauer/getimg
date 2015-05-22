@@ -25,14 +25,17 @@ def url2file(url):
 		
 		
 # get filename from first commandline argument
-workfile = str(sys.argv[1])
+if len(sys.argv) >= 2:
+    workfile = str(sys.argv[1])
 
-# catch errors with the commandline argument
-try:	
-	f = open(workfile, 'r')
-	for line in f:
-		line = line.rstrip()
-		url2file(line)
-	f.close()
-except IOError as e:
-    print("({})".format(e))
+    # catch errors with the commandline argument
+    try:	
+	    f = open(workfile, 'r')
+	    for line in f:
+    		line = line.rstrip()
+	    	url2file(line)
+	    f.close()
+    except IOError as e:
+        print("{}".format(e))
+else:
+    print "Usage: getimg.py inputfile.txt"
